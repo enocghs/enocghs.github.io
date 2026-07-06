@@ -1,0 +1,115 @@
+.experience-section {
+  background-color: var(--bg-light);
+  transition: background-color 0.3s ease;
+}
+
+html.dark .experience-section {
+  background-color: var(--bg-dark);
+}
+
+.experience-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: relative;
+}
+
+.experience-card {
+  padding: 2rem;
+  background-color: var(--card-light);
+  border-radius: 12px;
+  border-left: 4px solid var(--accent);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+html.dark .experience-card {
+  background-color: var(--card-dark);
+}
+
+.experience-card:hover {
+  transform: translateX(8px);
+  box-shadow: 0 8px 24px var(--shadow-light);
+}
+
+html.dark .experience-card:hover {
+  box-shadow: 0 8px 24px var(--shadow-dark);
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.experience-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+  color: var(--text-light);
+}
+
+html.dark .experience-card h3 {
+  color: var(--text-dark);
+}
+
+.experience-card h4 {
+  font-size: 1.1rem;
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.period {
+  background-color: var(--accent);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.description {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.achievements {
+  list-style: none;
+  padding: 0;
+}
+
+.achievements li {
+  padding: 0.5rem 0;
+  padding-left: 1.5rem;
+  position: relative;
+  line-height: 1.6;
+}
+
+.achievements li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .experience-header {
+    flex-direction: column;
+  }
+
+  .experience-card {
+    padding: 1.5rem;
+  }
+
+  .experience-card h3 {
+    font-size: 1.25rem;
+  }
+
+  .period {
+    align-self: flex-start;
+  }
+}

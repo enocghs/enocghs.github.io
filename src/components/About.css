@@ -1,0 +1,82 @@
+.about-section {
+  background-color: var(--card-light);
+  transition: background-color 0.3s ease;
+}
+
+html.dark .about-section {
+  background-color: var(--card-dark);
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.about-text {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.about-text p {
+  margin-bottom: 1.5rem;
+}
+
+.about-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.info-card {
+  padding: 1.5rem;
+  background-color: var(--bg-light);
+  border-radius: 12px;
+  border: 1px solid var(--border-light);
+  transition: all 0.3s ease;
+}
+
+html.dark .info-card {
+  background-color: var(--bg-dark);
+  border-color: var(--border-dark);
+}
+
+.info-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px var(--shadow-light);
+}
+
+html.dark .info-card:hover {
+  box-shadow: 0 8px 16px var(--shadow-dark);
+}
+
+.info-card h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-light);
+}
+
+html.dark .info-card h3 {
+  color: var(--text-dark);
+}
+
+.info-card p {
+  margin-bottom: 0.25rem;
+}
+
+.info-card .small {
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .about-text {
+    font-size: 1rem;
+  }
+}
